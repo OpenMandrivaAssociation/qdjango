@@ -8,6 +8,7 @@ Version:	0.1
 Release:	0.%{snapshot}.1
 Source0:	%{name}-git%{snapshot}.tar.xz
 Patch0:		qdjango-git20120110-mdv-build-shared.patch
+Patch1:		qdjango-git20120110-mdv-library_path.patch
 Group:		System/Libraries
 License:	LGPLv3+
 BuildRequires:	cmake
@@ -77,6 +78,7 @@ This package contains files required for development purposes only.
 %prep
 %setup -q -n %{name}-git%{snapshot}
 %patch0 -p1
+%patch1 -p1
 
 %build
 %cmake
