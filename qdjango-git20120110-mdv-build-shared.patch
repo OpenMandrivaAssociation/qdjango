@@ -1,0 +1,12 @@
+Index: qdjango-git20120110/src/CMakeLists.txt
+===================================================================
+--- qdjango-git20120110.orig/src/CMakeLists.txt
++++ qdjango-git20120110/src/CMakeLists.txt
+@@ -12,7 +12,6 @@ if(UNIX)
+ endif(UNIX)
+ 
+ # Until binary stability is reached, build static libraries
+-set(QDJANGO_STATIC 1)
+ if(QDJANGO_STATIC)
+   set(LIBRARY_TYPE STATIC)
+ else()

@@ -1,0 +1,39 @@
+Index: qdjango-git20120110/src/db/CMakeLists.txt
+===================================================================
+--- qdjango-git20120110.orig/src/db/CMakeLists.txt
++++ qdjango-git20120110/src/db/CMakeLists.txt
+@@ -28,6 +28,6 @@ if(NOT QDJANGO_DONT_INSTALL)
+     install(FILES ${HEADERS} DESTINATION include/qdjango/db)
+     install(TARGETS qdjango-db
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib)
++	LIBRARY DESTINATION lib${LIB_SUFFIX}
++	ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ endif()
+Index: qdjango-git20120110/src/http/CMakeLists.txt
+===================================================================
+--- qdjango-git20120110.orig/src/http/CMakeLists.txt
++++ qdjango-git20120110/src/http/CMakeLists.txt
+@@ -33,6 +33,6 @@ if(NOT QDJANGO_DONT_INSTALL)
+     install(FILES ${HEADERS} DESTINATION include/qdjango/http)
+     install(TARGETS qdjango-http
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib)
++	LIBRARY DESTINATION lib${LIB_SUFFIX}
++	ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ endif()
+Index: qdjango-git20120110/src/script/CMakeLists.txt
+===================================================================
+--- qdjango-git20120110.orig/src/script/CMakeLists.txt
++++ qdjango-git20120110/src/script/CMakeLists.txt
+@@ -18,6 +18,6 @@ if(NOT QDJANGO_DONT_INSTALL)
+     install(FILES ${HEADERS} DESTINATION include/qdjango/script)
+     install(TARGETS qdjango-script
+         RUNTIME DESTINATION bin
+-        LIBRARY DESTINATION lib
+-        ARCHIVE DESTINATION lib)
++	LIBRARY DESTINATION lib${LIB_SUFFIX}
++	ARCHIVE DESTINATION lib${LIB_SUFFIX})
+ endif()
