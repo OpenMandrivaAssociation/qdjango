@@ -88,3 +88,11 @@ This package contains files required for development purposes only.
 pushd build
 %makeinstall_std
 popd
+
+
+%changelog
+* Mon Jan 23 2012 Dmitry Mikhirev <dmikhirev@mandriva.org> 0.1-0.20120110.1
++ Revision: 766978
+- fix libraries installation path
+- imported package qdjango
+
