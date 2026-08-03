@@ -1,12 +1,11 @@
-%define snapshot	20120110
 %define major		0
 %define libname		%mklibname qdjango %major
 
 Name:		qdjango
 Summary:	Object Relation Mapper library built on top of Qt
-Version:	0.1
-Release:	0.%{snapshot}.1
-Source0:	%{name}-git%{snapshot}.tar.xz
+Version:	0.6.2
+Release:	1
+Source0:	https://github.com/jlaine/qdjango/archive/v%{version}/%{name}-%{version}.tar.gz
 Patch0:		qdjango-git20120110-mdv-build-shared.patch
 Patch1:		qdjango-git20120110-mdv-library_path.patch
 Group:		System/Libraries
@@ -76,9 +75,9 @@ This package contains files required for development purposes only.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q -n %{name}-git%{snapshot}
-%patch0 -p1
-%patch1 -p1
+%setup -q -n %{name}-%{version}
+%patch -P0 -p1
+%patch -P1 -p1
 
 %build
 %cmake

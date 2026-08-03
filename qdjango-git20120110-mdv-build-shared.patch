@@ -1,12 +1,15 @@
-Index: qdjango-git20120110/src/CMakeLists.txt
-===================================================================
---- qdjango-git20120110.orig/src/CMakeLists.txt
-+++ qdjango-git20120110/src/CMakeLists.txt
-@@ -12,7 +12,6 @@ if(UNIX)
- endif(UNIX)
+--- a/qdjango.pri
++++ b/qdjango.pri
+@@ -3,11 +3,7 @@
  
- # Until binary stability is reached, build static libraries
--set(QDJANGO_STATIC 1)
- if(QDJANGO_STATIC)
-   set(LIBRARY_TYPE STATIC)
- else()
+ # Determine library type (shared or staticlib)
+ isEmpty(QDJANGO_LIBRARY_TYPE) {
+-    android {
+-        QDJANGO_LIBRARY_TYPE = staticlib
+-    } else {
+-        QDJANGO_LIBRARY_TYPE = shared
+-    }
++    QDJANGO_LIBRARY_TYPE = shared
+ }
+ 
+ # Libraries for apps which use QDjango
